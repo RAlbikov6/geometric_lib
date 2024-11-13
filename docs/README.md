@@ -69,22 +69,13 @@ def perimetr() принимает переменную **a** - *сторона �
 ### Тесты с коректными входными данными
 
 def test_AreaCircle(self):
-self.assertAlmostEqual(AreaCircle(6), 113.0973, places=4)
-self.assertAlmostEqual(AreaCircle(1), math.pi, places=4)
 
 ### Тесты с некорекными входными данными
 
 1. def test_AreaCircle_zero(self):
-with self.assertRaises(ValueError):
-AreaCircle(0)
-
 2. def test_AreaCircle_negative(self):
-with self.assertRaises(ValueError):
-AreaCircle(-5)
-
 3. def test_AreaCircle_string(self):
-with self.assertRaises(ValueError):
-AreaCircle("a")
+
 ## История измения проекта
 
 ### 1-ый 'commit'
