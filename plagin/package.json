@@ -1,0 +1,56 @@
+{
+  "name": "comment-organizer",
+  "displayName": "Comment Organizer",
+  "description": "A VSCode extension to manage and delete comments in your codebase.",
+  "version": "1.0.0",
+  "publisher": "Ruslan",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onCommand:extension.comment-organizer.refresh",
+    "onCommand:extension.comment-organizer.goToComment",
+    "onCommand:extension.comment-organizer.deleteAllComments"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.comment-organizer.refresh",
+        "title": "Refresh Comments",
+        "category": "Comment Management"
+      },
+      {
+        "command": "extension.comment-organizer.goToComment",
+        "title": "Go to Comment",
+        "category": "Comment Management"
+      },
+      {
+        "command": "extension.comment-organizer.deleteAllComments",
+        "title": "Delete All Comments",
+        "category": "Comment Management"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "commentView",
+          "name": "Comments"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.11",
+    "@types/vscode": "^1.76.0",
+    "typescript": "^4.9.5"
+  }
+}
